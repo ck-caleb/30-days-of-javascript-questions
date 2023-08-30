@@ -156,6 +156,83 @@ console.log(parsedNumber);
 const word1 = "python";
 const word2 = "jargon";
 const isOnFoundInWord1 = word1.includes("on");
-const isOnFoundInWord2 = word2.includes("on");
+const isOnFoundIhnWord2 = word2.includes("on");
 console.log(`'on' is found in 'python': ${isOnFoundInWord1}`);
 console.log(`'on' is found in 'jargon': ${isOnFoundInWord2}`);
+
+// ?QUESTION 31. I hope this course is not full of jargon. Check if jargon is in the sentence.
+const jargonSentence = "I hope this course is not full of jargon";
+isJargonFound = jargonSentence.includes("jargon");
+console.log(`'jargon' is found in the sentence: ${isJargonFound}`);
+
+// !?QUESTION 32. Generate a random number between 0 and 100 inclusively.
+function getRandomNumber() {
+  //get random number
+  const randomNumber = Math.random();
+  //get integer
+  const randomInteger = Math.floor(randomNumber * 101);
+  return randomInteger;
+}
+const getRandomNumberBetweenZeroAndHundred = getRandomNumber();
+console.log(getRandomNumberBetweenZeroAndHundred);
+
+// ?QUESTION 33. Generate a random number between 50 and 100 inclusively.
+function getRandomNumberTwo(max, min) {
+  //generate random number
+  const secondRandomNumber = Math.random();
+  // generate integer
+  const secondRandomInteger = Math.floor(secondRandomNumber * (max - min + 1) + min);
+  //output
+  return secondRandomInteger;
+}
+const getRandomNumberBetweenFiftyAndHundred = getRandomNumberTwo(50, 100);
+console.log(getRandomNumberBetweenFiftyAndHundred);
+
+// ?QUESTION 34. Generate a random number between 0 and 255 inclusively.
+function getRandomNumberThree() {
+  //get random number
+  const thirdRandomNumber = Math.random();
+  //get integer
+  const thirdRandomInteger = Math.floor(thirdRandomNumber * 250);
+  return thirdRandomInteger;
+}
+const getRandomNumberBetweenZeroAndTwoHundredAndFifty = getRandomNumberThree();
+console.log(getRandomNumberBetweenZeroAndTwoHundredAndFifty);
+
+// ?QUESTION 35. Access the 'JavaScript' string characters using a random number.
+const wordToCheck = "JavaScript";
+// Generate a random index between 0 and word length
+const randomIndex = Math.floor(Math.random() * wordToCheck.length);
+const randomCharacter = wordToCheck.charAt(wordToCheck);
+console.log(`Random character at index ${randomIndex}: ${randomCharacter}`);
+
+/* 
+?QUESTION 36. Use console.log() and escape characters to print the following pattern.
+
+1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125 */
+
+// ?QUESTION 37. Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+const sentenceThree =
+  "You cannot end a sentence with because because because is a conjunction";
+const startIndex = sentenceThree.indexOf("because");
+const lastIndex = sentenceThree.lastIndexOf("because");
+const slicedPhrase = sentenceThree.substr(startIndex, lastIndex + 7 - startIndex);
+console.log(slicedPhrase);
+
+// Exercises: Level 3
+// ?QUESTION 38. 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.
+
+
+// ?QUESTION 39. Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+
+/*
+?QUESTION 40. Clean the following text and find the most frequent word (hint, use replace and regular expressions).
+
+    const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching' */
+
+
+// ?QUESTION 41. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
