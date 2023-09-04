@@ -181,7 +181,9 @@ function getRandomNumberTwo(max, min) {
   //generate random number
   const secondRandomNumber = Math.random();
   // generate integer
-  const secondRandomInteger = Math.floor(secondRandomNumber * (max - min + 1) + min);
+  const secondRandomInteger = Math.floor(
+    secondRandomNumber * (max - min + 1) + min
+  );
   //output
   return secondRandomInteger;
 }
@@ -220,12 +222,14 @@ const sentenceThree =
   "You cannot end a sentence with because because because is a conjunction";
 const startIndex = sentenceThree.indexOf("because");
 const lastIndex = sentenceThree.lastIndexOf("because");
-const slicedPhrase = sentenceThree.substr(startIndex, lastIndex + 7 - startIndex);
+const slicedPhrase = sentenceThree.substr(
+  startIndex,
+  lastIndex + 7 - startIndex
+);
 console.log(slicedPhrase);
 
 // Exercises: Level 3
 // ?QUESTION 38. 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.
-
 
 // ?QUESTION 39. Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
 
@@ -234,5 +238,94 @@ console.log(slicedPhrase);
 
     const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching' */
 
-
 // ?QUESTION 41. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
+// BOOLEAN, OPERATORS
+// 💻 Day 3: Exercises
+// ?QUESTION 42. Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
+firstName = "caleb";
+lastName = "koech";
+country = "kenya";
+city = "kericho";
+age = 25;
+isMarried = false;
+year = 2023;
+console.log(typeof firstName);
+console.log(typeof lastName);
+console.log(typeof country);
+console.log(typeof city);
+console.log(typeof age);
+console.log(typeof isMarried);
+console.log(typeof year);
+
+// ?QUESTION 43. Boolean value is either true or false.
+
+// Write three JavaScript statement which provide truthy value.
+// Write three JavaScript statement which provide falsy value.
+// ?QUESTION 44. Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
+
+// 4 > 3
+// 4 >= 3
+// 4 < 3
+// 4 <= 3
+// 4 == 4
+// 4 === 4
+// 4 != 4
+// 4 !== 4
+// 4 != '4'
+// 4 == '4'
+// 4 === '4'
+
+// ?QUESTION 45. Find the length of python and jargon and make a falsy comparison statement.
+
+// ?QUESTION 46. Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
+
+// 4 > 3 && 10 < 12
+// 4 > 3 && 10 > 12
+// 4 > 3 || 10 < 12
+// 4 > 3 || 10 > 12
+// !(4 > 3)
+// !(4 < 3)
+// !(false)
+// !(4 > 3 && 10 < 12)
+// !(4 > 3 && 10 > 12)
+// !(4 === '4')
+
+// ?QUESTION 47. Use the Date object to do the following activities
+// What is the year today?
+// What is the month today as a number?
+// What is the date today?
+// What is the day today as a number?
+// What is the hours now?
+// What is the minutes now?
+
+// ?QUESTION 48. Find out the numbers of seconds elapsed from January 1, 1970 to now.
+// Exercises: Level 2
+
+// ?QUESTION 49. Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+// Enter base: 20
+// Enter height: 10
+// The area of the triangle is 100
+// ?QUESTION 50. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c).Enter side a: 5,Enter side b: 4,Enter side c: 3,The perimeter of the triangle is 12
+
+// ?QUESTION 51. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+
+// ?QUESTION 52. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+
+// ?QUESTION 53. Calculate the slope, x-intercept and y-intercept of y = 2x -2.Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10/Compare the slope of above two questions.
+
+// ?QUESTION 54. Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+
+// ?QUESTION 55. Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?.Enter hours: 40.Enter rate per hour: 28. Your weekly earning is 1120
+
+// ?QUESTION 56. If the length of your name is greater than 7 say, your name is long else say your name is short.Compare your first name length and your family name length and you should get this output. let firstName = 'Asabeneh'.let lastName = 'Yetayeh'.Your first name, Asabeneh is longer than your family name, Yetayeh
+
+// ?QUESTION 57. Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.let myAge = 250.let yourAge = 25.I am 225 years older than you.
+
+// ?QUESTION 58. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.Enter birth year: 1995.You are 25. You are old enough to drive.Enter birth year: 2005.You are 15. You will be allowed to drive after 3 years.
+
+// ?QUESTION 59. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years.Enter number of years you live: 100.You lived 3153600000 seconds.
+
+// ?QUESTION 60. Create a human readable time format using the Date time object.YYYY-MM-DD HH:mm.DD-MM-YYYY HH:mm.DD/MM/YYYY HH:mm
+// Exercises: Level 3
+// ?QUESTION 61. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 ).YYY-MM-DD HH:mm eg. 20120-01-02 07:05
