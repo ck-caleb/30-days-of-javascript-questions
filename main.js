@@ -101,8 +101,6 @@ const allLetterA = textThree.match("a");
 console.log(allLetterA);
 
 // Use the match() method with a regular expression to find all occurrences of "a" (both lowercase and uppercase)
-const matches = text.match(/a/gi);
-console.log(matches);
 
 // ?QUESTION 24. Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
 const partOne = "30 Days of";
@@ -111,10 +109,7 @@ const bothMerged = partOne.concat(partTwo);
 console.log(bothMerged);
 
 // ?QUESTION 25. Use repeat() method to print 30 Days Of JavaScript 2 times
-console.log(challenge.repeat(2));
-const teixt = "30 Days Of JavaScript";
-// Print the string two times using the repeat() method
-const repeatedText = text.repeat(2);
+const repeatedText = challenge.repeat(2);
 console.log(repeatedText);
 
 // Exercise: Level 2
@@ -258,65 +253,117 @@ console.log(typeof age);
 console.log(typeof isMarried);
 console.log(typeof year);
 
-// ?QUESTION 43. Boolean value is either true or false.
+// ?QUESTION 43. Boolean value is either true or false.Write three JavaScript statement which provide truthy value.Write three JavaScript statement which provide falsy value.
+// statements that provide truthy value
+const truthyStatementOne = "javascript is powerful";
+console.log(truthyStatementOne);
+const truthyStatementTwo = [1, -1, 100, -88];
+console.log(truthyStatementTwo);
+const truthyStatementThree = 10 > 5;
+console.log(truthyStatementThree);
+// statements that provide falsy value
+const falsyStatementOne = console.log(falsyStatementOne);
+const falsyStatementTwo = null;
+console.log(falsyStatementTwo);
+const falsyStatementThree = 0;
+console.log(falsyStatementThree);
 
-// Write three JavaScript statement which provide truthy value.
-// Write three JavaScript statement which provide falsy value.
 // ?QUESTION 44. Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
 
-// 4 > 3
-// 4 >= 3
-// 4 < 3
-// 4 <= 3
-// 4 == 4
-// 4 === 4
-// 4 != 4
-// 4 !== 4
-// 4 != '4'
-// 4 == '4'
-// 4 === '4'
+// 4 > 3   true
+// 4 >= 3 true
+// 4 < 3  false
+// 4 <= 3 false
+// 4 == 4 true
+// 4 === 4 true
+// 4 != 4 false
+// 4 !== 4 false
+// 4 != '4' false
+// 4 == '4' true
+// 4 === '4' false
 
 // ?QUESTION 45. Find the length of python and jargon and make a falsy comparison statement.
+const wordOne = "python";
+const wordTwo = "jargon";
+const wordOneLength = wordOne.length;
+const wordTwoLength = wordTwo.length;
+const comparison = wordOneLength > wordTwoLength;
+console.log("length of python", wordOneLength);
+console.log("length of jargon", wordTwoLength);
+console.log("the comparison is :", comparison);
 
 // ?QUESTION 46. Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
 
-// 4 > 3 && 10 < 12
-// 4 > 3 && 10 > 12
-// 4 > 3 || 10 < 12
-// 4 > 3 || 10 > 12
-// !(4 > 3)
-// !(4 < 3)
-// !(false)
-// !(4 > 3 && 10 < 12)
-// !(4 > 3 && 10 > 12)
-// !(4 === '4')
+// 4 > 3 && 10 < 12 true
+// 4 > 3 && 10 > 12 false
+// 4 > 3 || 10 < 12 true
+// 4 > 3 || 10 > 12 true
+// !(4 > 3) false
+// !(4 < 3) true
+// !(false) true
+// !(4 > 3 && 10 < 12) false
+// !(4 > 3 && 10 > 12) true
+// !(4 === '4') true
 
 // ?QUESTION 47. Use the Date object to do the following activities
 // What is the year today?
+const now = new Date();
+console.log(now.getFullYear());
 // What is the month today as a number?
+console.log(now.getMonth());
 // What is the date today?
+console.log(now.getDate());
 // What is the day today as a number?
+console.log(now.getDay());
 // What is the hours now?
+console.log(now.getHours());
 // What is the minutes now?
+console.log(now.getMinutes());
 
 // ?QUESTION 48. Find out the numbers of seconds elapsed from January 1, 1970 to now.
+const timestamp = now.getTime();
+const secondsElapsed = Math.floor(timestamp / 1000);
+console.log("Seconds elapsed since january 1st 1970 :", secondsElapsed);
+
 // Exercises: Level 2
 
-// ?QUESTION 49. Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
-// Enter base: 20
-// Enter height: 10
-// The area of the triangle is 100
-// ?QUESTION 50. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c).Enter side a: 5,Enter side b: 4,Enter side c: 3,The perimeter of the triangle is 12
+// ?QUESTION 49. Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).Enter base: 20. Enter height: 10. The area of the triangle is 100.
+let base = prompt("Enter base :");
+let height = prompt("Enter height :");
+let area = 0.5 * base * height;
+console.log("The area of the triangle is", area);
+
+// ?QUESTION 50. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c).Enter side a: 5,Enter side b: 4,Enter side c: 3,The perimeter of the triangle is 12.
+let sideA = prompt("Enter side A :");
+let sideB = prompt("Enter side B :");
+let sideC = prompt("Enter side C :");
+let perimeterOfTriangle = sideA + sideB + sideC;
+console.log("The perimeter is ", perimeterOfTriangle);
 
 // ?QUESTION 51. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
-
+let rectangleLength = prompt("Enter rectangle length :");
+let rectangleWidth = prompt("Enter rectangle width :");
+let areaOfRectangle = rectangleLength * rectangleWidth;
+let perimeterOfRectangle = 2 * (rectangleLength + rectangleWidth);
+console.log("The perimeter of the rectangle is ", perimeterOfRectangle);
+console.log("The area of the rectangle is ", areaOfRectangle);
 // ?QUESTION 52. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+const pi = 3.14;
+let radius = prompt(" Enter the radius :");
+let areaOfCircle = pi * radius * radius;
+let circumferenceofCircle = 2 * pi * radius;
+console.log("The area of circle is ", areaOfCircle);
+console.log("The circumference of circle is ", circumferenceofCircle);
 
 // ?QUESTION 53. Calculate the slope, x-intercept and y-intercept of y = 2x -2.Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10/Compare the slope of above two questions.
 
 // ?QUESTION 54. Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 
 // ?QUESTION 55. Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?.Enter hours: 40.Enter rate per hour: 28. Your weekly earning is 1120
+let hours = prompt("Enter hours :");
+let ratePerhour = prompt("Enter rate per hour :");
+let weeklyEarning = hours * ratePerhour;
+console.log("Your weekly earning is", weeklyEarning);
 
 // ?QUESTION 56. If the length of your name is greater than 7 say, your name is long else say your name is short.Compare your first name length and your family name length and you should get this output. let firstName = 'Asabeneh'.let lastName = 'Yetayeh'.Your first name, Asabeneh is longer than your family name, Yetayeh
 
@@ -326,6 +373,12 @@ console.log(typeof year);
 
 // ?QUESTION 59. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years.Enter number of years you live: 100.You lived 3153600000 seconds.
 
-// ?QUESTION 60. Create a human readable time format using the Date time object.YYYY-MM-DD HH:mm.DD-MM-YYYY HH:mm.DD/MM/YYYY HH:mm
 // Exercises: Level 3
-// ?QUESTION 61. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 ).YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+// ?QUESTION 60. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 ).YYY-MM-DD HH:mm eg. 2012-01-02 07:05
+const currentYear = now.getFullYear();
+const currentMonth = now.getMonth();
+const currentDate = now.getDate();
+const currentHour = now.getHours();
+const currentMinute = now.getMinutes();
+const humanReadableForm = `${currentYear}-${currentMonth}-${currentDate}  ${currentHour}:${currentMinute}`;
+console.log(humanReadableForm);
