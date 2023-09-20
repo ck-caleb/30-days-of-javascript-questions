@@ -151,7 +151,7 @@ console.log(parsedNumber);
 const word1 = "python";
 const word2 = "jargon";
 const isOnFoundInWord1 = word1.includes("on");
-const isOnFoundIhnWord2 = word2.includes("on");
+const isOnFoundInWord2 = word2.includes("on");
 console.log(`'on' is found in 'python': ${isOnFoundInWord1}`);
 console.log(`'on' is found in 'jargon': ${isOnFoundInWord2}`);
 
@@ -235,7 +235,7 @@ console.log(slicedPhrase);
 
 // ?QUESTION 41. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
 
-// BOOLEAN, OPERATORS
+// !BOOLEAN, OPERATORS AND DATES
 // 💻 Day 3: Exercises
 // ?QUESTION 42. Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
 firstName = "caleb";
@@ -328,28 +328,28 @@ console.log("Seconds elapsed since january 1st 1970 :", secondsElapsed);
 // Exercises: Level 2
 
 // ?QUESTION 49. Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).Enter base: 20. Enter height: 10. The area of the triangle is 100.
-let base = prompt("Enter base :");
-let height = prompt("Enter height :");
+let base = parseFloat(prompt("Enter base :"));
+let height = parseFloat(prompt("Enter height :"));
 let area = 0.5 * base * height;
 console.log("The area of the triangle is", area);
 
 // ?QUESTION 50. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c).Enter side a: 5,Enter side b: 4,Enter side c: 3,The perimeter of the triangle is 12.
-let sideA = prompt("Enter side A :");
-let sideB = prompt("Enter side B :");
-let sideC = prompt("Enter side C :");
+let sideA = parseFloat(prompt("Enter side A :"));
+let sideB = parseFloat(prompt("Enter side B :"));
+let sideC = parseFloat(prompt("Enter side C :"));
 let perimeterOfTriangle = sideA + sideB + sideC;
 console.log("The perimeter is ", perimeterOfTriangle);
 
 // ?QUESTION 51. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
-let rectangleLength = prompt("Enter rectangle length :");
-let rectangleWidth = prompt("Enter rectangle width :");
+let rectangleLength = parseFloat(prompt("Enter rectangle length :"));
+let rectangleWidth = parseFloat(prompt("Enter rectangle width :"));
 let areaOfRectangle = rectangleLength * rectangleWidth;
 let perimeterOfRectangle = 2 * (rectangleLength + rectangleWidth);
 console.log("The perimeter of the rectangle is ", perimeterOfRectangle);
 console.log("The area of the rectangle is ", areaOfRectangle);
 // ?QUESTION 52. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
 const pi = 3.14;
-let radius = prompt(" Enter the radius :");
+let radius = parseFloat(prompt(" Enter the radius :"));
 let areaOfCircle = pi * radius * radius;
 let circumferenceofCircle = 2 * pi * radius;
 console.log("The area of circle is ", areaOfCircle);
@@ -360,25 +360,57 @@ console.log("The circumference of circle is ", circumferenceofCircle);
 // ?QUESTION 54. Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 
 // ?QUESTION 55. Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?.Enter hours: 40.Enter rate per hour: 28. Your weekly earning is 1120
-let hours = prompt("Enter hours :");
-let ratePerhour = prompt("Enter rate per hour :");
+let hours = parseFloat(prompt("Enter hours :"));
+let ratePerhour = parseFloat(prompt("Enter rate per hour :"));
 let weeklyEarning = hours * ratePerhour;
 console.log("Your weekly earning is", weeklyEarning);
 
 // ?QUESTION 56. If the length of your name is greater than 7 say, your name is long else say your name is short.Compare your first name length and your family name length and you should get this output. let firstName = 'Asabeneh'.let lastName = 'Yetayeh'.Your first name, Asabeneh is longer than your family name, Yetayeh
-
+let firstName = "Asabeneh";
+let lastName = "Yetayeh";
+if (firstName.length > 7) {
+  console.log("your name is long");
+} else {
+  console.log("your name is short");
+}
+if (firstName.length > lastName.length) {
+  console.log(
+    `your first name ${firstName} is longer than your family name, ${lastName}`
+  );
+} else {
+  console.log(
+    `your family name ${lastName} is longer than your first name, ${firstName}`
+  );
+}
 // ?QUESTION 57. Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.let myAge = 250.let yourAge = 25.I am 225 years older than you.
+let myAge = 250;
+let yourAge = 25;
+const ageDifference = Math.abs(myAge - yourAge);
+console.log(`i am ${ageDifference} years older than you`);
 
 // ?QUESTION 58. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.Enter birth year: 1995.You are 25. You are old enough to drive.Enter birth year: 2005.You are 15. You will be allowed to drive after 3 years.
-
+const applicantBirthYear = parseInt(prompt("Enter birth year : "));
+const currentApplicantAge = currentYear - applicantBirthYear;
+if (currentApplicantAge >= 18) {
+  console.log(`You are ${currentApplicantAge}`);
+  console.log(`You are old enough to drive`);
+} else {
+  const yearsRemainingToDrive = 18 - currentApplicantAge;
+  console.log(`You are ${currentApplicantAge}`);
+  console.log(`You will be allowed to drive after ${yearsRemainingToDrive}`);
+}
 // ?QUESTION 59. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years.Enter number of years you live: 100.You lived 3153600000 seconds.
+const yearsLived = parseInt(prompt("Enter number of years you live :  "));
+const secondsInOneYear = 365 * 24 * 60 * 60;
+const totalSecondsLived = secondsInOneYear * yearsLived;
+console.log(`you lived ${totalSecondsLived} seconds`);
 
 // Exercises: Level 3
 // ?QUESTION 60. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 ).YYY-MM-DD HH:mm eg. 2012-01-02 07:05
 const currentYear = now.getFullYear();
-const currentMonth = now.getMonth();
-const currentDate = now.getDate();
-const currentHour = now.getHours();
-const currentMinute = now.getMinutes();
+const currentMonth = (now.getMonth() + 1).toString().padStart(2, "0");
+const currentDate = now.getDate().toString().padStart(2, "0");
+const currentHour = now.getHours().toString().padStart(2, "0");
+const currentMinute = now.getMinutes().toString().padStart(2, "0");
 const humanReadableForm = `${currentYear}-${currentMonth}-${currentDate}  ${currentHour}:${currentMinute}`;
 console.log(humanReadableForm);
