@@ -238,15 +238,15 @@ console.log(slicedPhrase);
 // !BOOLEAN, OPERATORS AND DATES
 // 💻 Day 3: Exercises
 // ?QUESTION 42. Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
-firstName = "caleb";
-lastName = "koech";
-country = "kenya";
-city = "kericho";
-age = 25;
-isMarried = false;
-year = 2023;
-console.log(typeof firstName);
-console.log(typeof lastName);
+const firstNamee = "caleb";
+const lastNamee = "koech";
+const country = "kenya";
+const city = "kericho";
+const age = 25;
+const isMarried = false;
+const year = 2023;
+console.log(typeof firstNamee);
+console.log(typeof lastNamee);
 console.log(typeof country);
 console.log(typeof city);
 console.log(typeof age);
@@ -262,7 +262,8 @@ console.log(truthyStatementTwo);
 const truthyStatementThree = 10 > 5;
 console.log(truthyStatementThree);
 // statements that provide falsy value
-const falsyStatementOne = console.log(falsyStatementOne);
+const falsyStatementOne = undefined;
+console.log(falsyStatementOne);
 const falsyStatementTwo = null;
 console.log(falsyStatementTwo);
 const falsyStatementThree = 0;
@@ -390,7 +391,9 @@ console.log(`i am ${ageDifference} years older than you`);
 
 // ?QUESTION 58. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.Enter birth year: 1995.You are 25. You are old enough to drive.Enter birth year: 2005.You are 15. You will be allowed to drive after 3 years.
 const applicantBirthYear = parseInt(prompt("Enter birth year : "));
-const currentApplicantAge = currentYear - applicantBirthYear;
+const currentTime = new Date();
+const currentYearr = currentTime.getFullYear();
+const currentApplicantAge = currentYearr - applicantBirthYear;
 if (currentApplicantAge >= 18) {
   console.log(`You are ${currentApplicantAge}`);
   console.log(`You are old enough to drive`);
@@ -418,20 +421,80 @@ console.log(humanReadableForm);
 // Exercises
 // Exercises: Level 1
 // ?QUESTION 61. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:'You are old enough to drive' but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.Enter your age: 30.You are old enough to drive.Enter your age:15.You are left with 3 years to drive.
+let driverApplicantAge = parseInt(prompt("Enter your age : "));
+if (driverApplicantAge >= 18) {
+  console.log("You are old enough to drive");
+} else {
+  const yearsToWait = 18 - driverApplicantAge;
+  console.log(`you are left with ${yearsToWait} to drive`);
+}
 
 // ?QUESTION 62. Compare the values of myAge and yourAge using if … else. Based on the comparison and log the result to console stating who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.Enter your age: 30.You are 5 years older than me.
+const myAge1 = 25;
+const yourAge1 = parseInt(prompt("Enter your age: "));
+const ageDifference1 = Math.abs(yourAge1 - myAge1);
+if (yourAge1 > myAge1) {
+  console.log(`You are ${ageDifference1} older than me`);
+} else {
+  console.log(`You are ${ageDifference1} younger than me`);
+}
 
 // ?QUESTION 63. If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways. using if else.   ternary operator. let a = 4. let b = 3. 4 is greater than 3
+a = 4;
+b = 3;
+if (a > b) {
+  console.log("a is greater than b");
+} else {
+  console.log("a is less than b");
+}
+//ternary operator
+a > b ? console.log("a is greater than b") : console.log("a is less than b");
 
 // ?QUESTION 64. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?.Enter a number: 2. 2 is an even number.Enter a number: 9. 9 is is an odd number.
-
+const numberToCheck = parseInt(prompt("Enter a number: "));
+if (numberToCheck % 2 === 0) {
+  console.log(`${numberToCheck} is an even number`);
+} else {
+  console.log(`${numberToCheck} is an odd number`);
+}
 
 // Exercises: Level 2
-// ?QUESTION 65. Write a code which can give grades to students according to theirs scores: 80-100, A. 70-89, B. 60-69, C. 50-59, D. 0-49, F
-
+// ?QUESTION 65. Write a code which can give grades to students according to theirs scores: 80-100, A. 70-79, B. 60-69, C. 50-59, D. 0-49, F
+let studentScore = 85;
+if (studentScore >= 80 && studentScore <= 100) {
+  console.log("A");
+} else if (studentScore >= 70 && studentScore <= 79) {
+  console.log("B");
+} else if (studentScore >= 60 && studentScore <= 69) {
+  console.log("C");
+} else if (studentScore >= 50 && studentScore <= 59) {
+  console.log("D");
+} else if (studentScore >= 0 && studentScore <= 49) {
+  console.log("F");
+} else {
+  console.log("student score is incorrect");
+}
 // ?QUESTION 66. Check if the season is Autumn, Winter, Spring or Summer. If the user input is : September, October or November, the season is Autumn. December, January or February, the season is Winter. March, April or May, the season is Spring. June, July or August, the season is Summer
+let month = prompt(" Enter month: ");
+const monthToCheck = month.toLowerCase();
+const autumn = ["september", "october", "november"];
+const winter = ["december", "january", "february"];
+const spring = ["march", "april", "may"];
+const summer = ["june", "july", "august"];
+if (autumn.includes(monthToCheck)) {
+  console.log("the season is autumn");
+} else if (winter.includes(monthToCheck)) {
+  console.log("the season is winter");
+} else if (spring.includes(monthToCheck)) {
+  console.log("the season is spring");
+} else if (summer.includes(monthToCheck)) {
+  console.log("the season is summer");
+} else {
+  console.log("incorrect entry");
+}
 
 // ?QUESTION 67. Check if a day is weekend day or a working day. Your script will take day as an input. What is the day  today? Saturday.Saturday is a weekend. What is the day today? saturDaY. Saturday is a weekend. What is the day today? Friday. Friday is a working day. What is the day today? FrIDAy. Friday is a working day.
+
 
 // Exercises: Level 3
 // ?QUESTION 68. Write a program which tells the number of days in a month. Enter a month: January. January has 31 days. Enter a month: JANUARY. January has 31 day. Enter a month: February. February has 28 days. Enter a month: FEbruary. February has 28 days.
