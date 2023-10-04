@@ -494,9 +494,75 @@ if (autumn.includes(monthToCheck)) {
 }
 
 // ?QUESTION 67. Check if a day is weekend day or a working day. Your script will take day as an input. What is the day  today? Saturday.Saturday is a weekend. What is the day today? saturDaY. Saturday is a weekend. What is the day today? Friday. Friday is a working day. What is the day today? FrIDAy. Friday is a working day.
-
+let day = prompt("What is the day today? : ");
+const dayEntered = day.toLowerCase();
+const workingDays = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+const weekendDays = ["saturday", "sunday"];
+if (workingDays.includes(dayEntered)) {
+  console.log(`${dayEntered} is a working day`);
+} else if (weekendDays.includes(dayEntered)) {
+  console.log(`${dayEntered} is a weekend`);
+}
 
 // Exercises: Level 3
 // ?QUESTION 68. Write a program which tells the number of days in a month. Enter a month: January. January has 31 days. Enter a month: JANUARY. January has 31 day. Enter a month: February. February has 28 days. Enter a month: FEbruary. February has 28 days.
 
+let monthEntry = prompt("Enter a month: ");
+const monthEntryLowerCase = month.toLowerCase();
+if (
+  monthEntryLowerCase === "january" ||
+  monthEntryLowerCase === "march" ||
+  monthEntryLowerCase === "may" ||
+  monthEntryLowerCase === "july" ||
+  monthEntryLowerCase === "august" ||
+  monthEntryLowerCase === "october" ||
+  monthEntryLowerCase === "december"
+) {
+  console.log(`${month} has 31 days.`);
+} else if (
+  monthEntryLowerCase === "april" ||
+  monthEntryLowerCase === "june" ||
+  monthEntryLowerCase === "september" ||
+  monthEntryLowerCase === "november"
+) {
+  console.log(`${month} has 30 days.`);
+} else if (monthEntryLowerCase === "february") {
+  console.log(`${month} has 28 days.`);
+} else {
+  console.log("Invalid input. Please enter a valid month.");
+}
+
 // ?QUESTION 69. Write a program which tells the number of days in a month, now consider leap year.
+let monthEntered = prompt("enter current month :");
+const monthEnteredLowerCase = monthEntered.toLowerCase();
+const yearEntry = parseInt(prompt("enter the year : "));
+function isLeapYear(yearEntry) {
+  return yearEntry % 4 === 0 && yearEntry % 100 !== 0 && yearEntry % 400 === 0;
+}
+if (
+  monthEnteredLowerCase === "january" ||
+  monthEnteredLowerCase === "march" ||
+  monthEnteredLowerCase === "may" ||
+  monthEnteredLowerCase === "july" ||
+  monthEnteredLowerCase === "august" ||
+  monthEnteredLowerCase === "october" ||
+  monthEnteredLowerCase === "december"
+) {
+  console.log(`${month} has 31 days.`);
+} else if (
+  monthEnteredLowerCase === "april" ||
+  monthEnteredLowerCase === "june" ||
+  monthEnteredLowerCase === "september" ||
+  monthEnteredLowerCase === "november"
+) {
+  console.log(`${month} has 30 days.`);
+} else if (monthEnteredLowerCase === "february") {
+  if (isLeapYear(yearEntry)) {
+    console.log(`${monthEnteredLowerCase} has 29 days`);
+  } else {
+    console.log(`${monthEnteredLowerCase} has 28 days`);
+  }
+}
+else{
+  console.log("invalid month. Enter a valid month name")
+}
