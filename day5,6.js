@@ -1,3 +1,4 @@
+// !DAY 5
 // !ARRAYS
 // !💻 Exercise
 // !Exercise: Level 1
@@ -274,6 +275,253 @@ console.log("Age range:", ageRange);
 // ?QUESTION 35.Compare the value of (min - average) and (max - average), use abs() method
 
 // ?QUESTION 36.Slice the first ten countries from the countries array
+const countriesCopy = [...countries];
+const tenSlicedCompanies = countriesCopy.splice(0, 10);
+console.log("First Ten Countries:", tenSlicedCompanies);
+
 // ?QUESTION 37.Find the middle country(ies) in the countries array
+const countriesMiddleIndex = Math.floor(countries.length / 2);
+console.log(countriesMiddleIndex);
+let middleCountries;
+if (countries.length % 2 === 0) {
+  middleCountries = [
+    countries[countriesMiddleIndex - 1],
+    countries[countriesMiddleIndex],
+  ];
+} else {
+  middleCountries = [countries[countriesMiddleIndex]];
+}
+console.log(middleCountries);
 
 // ?QUESTION 38.Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+
+const middleIndex = Math.floor(countries.length / 2);
+console.log(middleIndex);
+let firstHalf;
+let secondHalf;
+if (countries.length % 2 === 0) {
+  firstHalf = countries.slice(0, middleIndex);
+  secondHalf = countries.slice(middleIndex);
+} else {
+  firstHalf = countries.slice(0, middleIndex + 1);
+  secondHalf = countries.slice(middleIndex + 1);
+}
+console.log("Countries:", countries);
+console.log("First Half:", firstHalf);
+console.log("Second Half:", secondHalf);
+
+// !Loops
+// !💻 Exercises:Day 6
+// !Exercises: Level 1
+const countries2 = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+const webTechs2 = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack2 = ["MongoDB", "Express", "React", "Node"];
+//// ?QUESTION 38. Iterate 0 to 10 using for loop, do the same using while and do while loop
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
+let z = 0;
+while (z < 10) {
+  console.log(z);
+  z++;
+}
+let y = 0;
+do {
+  console.log(y);
+  y++;
+} while (y <= 10);
+
+// ?QUESTION 39.Iterate 10 to 0 using for loop, do the same using while and do while loop
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
+let i = 10;
+while (i >= 0) {
+  console.log(i);
+  i--;
+}
+z = 10;
+do {
+  console.log(z);
+  z--;
+} while (z >= 0);
+// ?QUESTION 40.Iterate 0 to n using for loop
+
+// ?QUESTION 41.Write a loop that makes the following pattern using console.log():
+
+/* #
+    ##
+    ###
+    ####
+    #####
+    ######
+    #######
+ */
+
+// ?QUESTION 42.Use loop to print the following pattern:
+/* 
+0 x 0 = 0
+1 x 1 = 1
+2 x 2 = 4
+3 x 3 = 9
+4 x 4 = 16
+5 x 5 = 25
+6 x 6 = 36
+7 x 7 = 49
+8 x 8 = 64
+9 x 9 = 81
+10 x 10 = 100
+ */
+
+let num = 0;
+for (i = 0; i <= 10; i++) {
+  console.log(`${num} * ${num} =${num * num}`);
+  num = num + 1;
+}
+// ?QUESTION 43.Using loop print the following pattern
+
+/* i    i^2   i^3
+ 0    0     0
+ 1    1     1
+ 2    4     8
+ 3    9     27
+ 4    16    64
+ 5    25    125
+ 6    36    216
+ 7    49    343
+ 8    64    512
+ 9    81    729
+ 10   100   1000 */
+// ?QUESTION 44.Use for loop to iterate from 0 to 100 and print only even numbers
+let evenNum = 0;
+for (i = 0; i < 100; i++) {
+  if (evenNum % 2 === 0) {
+    console.log(i);
+  }
+  evenNum += 1;
+}
+// ?QUESTION 45.Use for loop to iterate from 0 to 100 and print only odd numbers
+let oddNum = 0;
+for (z = 0; z <= 100; z++) {
+  if (oddNum % 2 === 0) {
+  } else {
+    console.log(z);
+  }
+  oddNum += 1;
+}
+// ?QUESTION 46.Use for loop to iterate from 0 to 100 and print only prime numbers
+
+// ?QUESTION 47.Use for loop to iterate from 0 to 100 and print the sum of all numbers.The sum of all numbers from 0 to 100 is 5050.
+let sum = 0;
+for (i = 0; i <= 100; i++) {
+  console.log(i);
+  sum = sum + i;
+  console.log(sum);
+}
+console.log(sum);
+// ?QUESTION 49.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+// ?QUESTION 50.The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
+
+// ?QUESTION 51.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array.[2550, 2500]
+
+// ?QUESTION 52.Develop a small script which generate array of 5 random numbers
+
+// ?QUESTION 53.Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+// ?QUESTION 54.Develop a small script which generate a six characters random id:5j2khz
+
+// !Exercises: Level 2
+
+// ?QUESTION 55.Develop a small script which generate any number of characters random id:fe3jo1gl124g xkqci4utda1lmbelpkm03rba
+
+// ?QUESTION 56.Write a script which generates a random hexadecimal number. '#ee33df'
+
+// ?QUESTION 57.Write a script which generates a random rgb color number. rgb(240,180,80)
+
+// ?QUESTION 58.Using the above countries array, create the following new array. ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+// ?QUESTION 59.Using the above countries array, create an array for countries length'. [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+
+// ?QUESTION 60.Use the countries array to create the following array of arrays:
+
+/* [
+  ['Albania', 'ALB', 7],
+  ['Bolivia', 'BOL', 7],
+  ['Canada', 'CAN', 6],
+  ['Denmark', 'DEN', 7],
+  ['Ethiopia', 'ETH', 8],
+  ['Finland', 'FIN', 7],
+  ['Germany', 'GER', 7],
+  ['Hungary', 'HUN', 7],
+  ['Ireland', 'IRE', 7],
+  ['Iceland', 'ICE', 7],
+  ['Japan', 'JAP', 5],
+  ['Kenya', 'KEN', 5]
+] */
+
+// ?QUESTION 61.In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land' ['Finland','Ireland', 'Iceland']
+
+// ?QUESTION 62.In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'. ['Albania', 'Bolivia','Ethiopia']
+
+// ?QUESTION 63.Using the above countries array, find the country containing the biggest number of characters. Ethiopia
+
+// ?QUESTION 64.Using the above countries array, find the country containing only 5 characters. ['Japan', 'Kenya']
+
+// ?QUESTION 65.Find the longest word in the webTechs2 array
+
+// ?QUESTION 66.Use the webTechs array to create the following array of arrays: [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+
+// ?QUESTION 67.An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+
+// ?QUESTION 68.Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+
+// ?QUESTION 69.This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+
+// ?QUESTION 70.Print all the elements of array as shown below.
+
+/* const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+  ]
+  HTML
+  CSS
+  JS
+  REACT
+  NODE
+  EXPRESS
+  MONGODB */
+
+// !Exercises: Level 3
+
+// ?QUESTION 71.Copy countries array(Avoid mutation)
+// ?QUESTION 72.Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+// ?QUESTION 73.Sort the webTechs array and mernStack array
+// ?QUESTION 74.Extract all the countries contain the word 'land' from the countries array and print it as array
+// ?QUESTION 75.Find the country containing the hightest number of characters in the countries array
+// ?QUESTION 76.Extract all the countries contain the word 'land' from the countries array and print it as array
+// ?QUESTION 77.Extract all the countries containing only four characters from the countries array and print it as array
+// ?QUESTION 78.Extract all the countries containing two or more words from the countries array and print it as array
+// ?QUESTION 79.Reverse the countries array and capitalize each country and stored it as an array
