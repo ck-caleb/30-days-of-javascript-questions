@@ -432,6 +432,20 @@ for (z = 0; z <= 100; z++) {
   oddNum += 1;
 }
 // ?QUESTION 46.Use for loop to iterate from 0 to 100 and print only prime numbers
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+for (let i = 0; i <= 100; i++) {
+  if (isPrime(i)) {
+    console.log(i);
+  }
+}
+
 
 // ?QUESTION 47.Use for loop to iterate from 0 to 100 and print the sum of all numbers.The sum of all numbers from 0 to 100 is 5050.
 let sum = 0;
