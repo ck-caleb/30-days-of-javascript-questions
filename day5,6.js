@@ -338,6 +338,7 @@ const webTechs2 = [
 ];
 
 const mernStack2 = ["MongoDB", "Express", "React", "Node"];
+
 //// ?QUESTION 38. Iterate 0 to 10 using for loop, do the same using while and do while loop
 for (let i = 0; i <= 10; i++) {
   console.log(i);
@@ -367,7 +368,12 @@ do {
   console.log(z);
   z--;
 } while (z >= 0);
+
 // ?QUESTION 40.Iterate 0 to n using for loop
+const n = 20
+for(let i =0; i<=n; i++){
+  console.log(i)
+}
 
 // ?QUESTION 41.Write a loop that makes the following pattern using console.log():
 
@@ -379,6 +385,9 @@ do {
     ######
     #######
  */
+for (let i = 1; i <= 7; i++) {
+  console.log("#".repeat(i));
+}
 
 // ?QUESTION 42.Use loop to print the following pattern:
 /* 
@@ -395,11 +404,10 @@ do {
 10 x 10 = 100
  */
 
-let num = 0;
-for (i = 0; i <= 10; i++) {
-  console.log(`${num} * ${num} =${num * num}`);
-  num = num + 1;
+for (let i = 0; i <= 10; i++) {
+  console.log(`${i} * ${i} =${i * i}`);
 }
+
 // ?QUESTION 43.Using loop print the following pattern
 
 /* i    i^2   i^3
@@ -415,21 +423,17 @@ for (i = 0; i <= 10; i++) {
  9    81    729
  10   100   1000 */
 // ?QUESTION 44.Use for loop to iterate from 0 to 100 and print only even numbers
-let evenNum = 0;
-for (i = 0; i < 100; i++) {
-  if (evenNum % 2 === 0) {
+for (let i = 0; i < 100; i++) {
+  if (i % 2 === 0) {
     console.log(i);
   }
-  evenNum += 1;
 }
 // ?QUESTION 45.Use for loop to iterate from 0 to 100 and print only odd numbers
 let oddNum = 0;
-for (z = 0; z <= 100; z++) {
-  if (oddNum % 2 === 0) {
-  } else {
-    console.log(z);
+for (let i = 0; i < 100; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
   }
-  oddNum += 1;
 }
 // ?QUESTION 46.Use for loop to iterate from 0 to 100 and print only prime numbers
 function isPrime(num) {
@@ -445,7 +449,6 @@ for (let i = 0; i <= 100; i++) {
     console.log(i);
   }
 }
-
 
 // ?QUESTION 47.Use for loop to iterate from 0 to 100 and print the sum of all numbers.The sum of all numbers from 0 to 100 is 5050.
 let sum = 0;
