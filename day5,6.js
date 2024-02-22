@@ -370,9 +370,9 @@ do {
 } while (z >= 0);
 
 // ?QUESTION 40.Iterate 0 to n using for loop
-const n = 20
-for(let i =0; i<=n; i++){
-  console.log(i)
+const n = 20;
+for (let i = 0; i <= n; i++) {
+  console.log(i);
 }
 
 // ?QUESTION 41.Write a loop that makes the following pattern using console.log():
@@ -460,12 +460,29 @@ for (i = 0; i <= 100; i++) {
 console.log(sum);
 // ?QUESTION 49.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 
-// ?QUESTION 50.The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
+let sumOfEven = 0;
+let sumOfOdd = 0;
+for (i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+    sumOfEven = sumOfEven + i;
+  } else {
+    console.log(i);
+    sumOfOdd = sumOfOdd + i;
+  }
+}
+console.log(sumOfEven);
+console.log(sumOfOdd);
 
 // ?QUESTION 51.Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array.[2550, 2500]
 
 // ?QUESTION 52.Develop a small script which generate array of 5 random numbers
-
+const randomNumbers = [];
+for (i = 0; i < 5; i++) {
+  const randomNum = Math.floor(Math.random() * 100);
+  randomNumbers.push(randomNum);
+}
+console.log(randomNumbers);
 // ?QUESTION 53.Develop a small script which generate array of 5 random numbers and the numbers must be unique
 
 // ?QUESTION 54.Develop a small script which generate a six characters random id:5j2khz

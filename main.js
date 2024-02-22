@@ -562,7 +562,6 @@ if (
   } else {
     console.log(`${monthEnteredLowerCase} has 28 days`);
   }
-}
-else{
-  console.log("invalid month. Enter a valid month name")
+} else {
+  console.log("invalid month. Enter a valid month name");
 }
