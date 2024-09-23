@@ -207,7 +207,7 @@ function generateRandomId(length) {
   return newRandomId;
 }
 console.log(generateRandomId(21));
-// ?QUESTION 56.Write a script which generates a random hexadecimal number. '#ee33df'
+// ?QUESTION 17.Write a script which generates a random hexadecimal number. '#ee33df'
 function generatehexadecimalNumber() {
   const updatedCharacters = "0123456789ABCDEF";
   let hexColor = "#";
@@ -221,7 +221,7 @@ function generatehexadecimalNumber() {
 }
 console.log(generatehexadecimalNumber());
 
-// ?QUESTION 57.Write a script which generates a random rgb color number. rgb(240,180,80)
+// ?QUESTION 18.Write a script which generates a random rgb color number. rgb(240,180,80)
 function generateRGB() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -230,14 +230,14 @@ function generateRGB() {
 }
 console.log(generateRGB());
 
-// ?QUESTION 58.Using the above countries array, create the following new array. ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+// ?QUESTION 19.Using the above countries array, create the following new array. ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
 const capitalizedCountriesArray = [];
 for (i = 0; i < countries2.length; i++) {
   capitalizedCountriesArray.push(countries2[i].toUpperCase());
 }
 console.log(capitalizedCountriesArray);
 
-// ?QUESTION 59.Using the above countries array, create an array for countries length'. [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+// ?QUESTION 20.Using the above countries array, create an array for countries length'. [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
 const countriesLength = [];
 for (i = 0; i < countries2.length; i++) {
   const countryLength = countries2[i].length;
@@ -245,7 +245,7 @@ for (i = 0; i < countries2.length; i++) {
 }
 console.log(countriesLength);
 
-// ?QUESTION 60.Use the countries array to create the following array of arrays:
+// ?QUESTION 21.Use the countries array to create the following array of arrays:
 
 /* [
     ['Albania', 'ALB', 7],
@@ -273,7 +273,7 @@ for (i = 0; i < countries2.length; i++) {
 countriesArrays.push(individualCountryArray);
 console.log(individualCountryArray);
 console.log(countriesArrays);
-// ?QUESTION 61.In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land' ['Finland','Ireland', 'Iceland']
+// ?QUESTION 22.In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land' ['Finland','Ireland', 'Iceland']
 const countriesWithLandd = countries2.filter((country) =>
   country.toLowerCase().includes("land")
 );
@@ -284,7 +284,7 @@ if (countriesWithLandd.length > 0) {
   console.log("All these countries are without land");
 }
 
-// ?QUESTION 62.In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'. ['Albania', 'Bolivia','Ethiopia']
+// ?QUESTION 23.In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'. ['Albania', 'Bolivia','Ethiopia']
 const countriesEndWithIa = countries2.filter((country) =>
   country.endsWith("ia")
 );
@@ -294,21 +294,67 @@ if (countriesEndWithIa.length > 0) {
 } else {
   console.log("These are countries ends without ia");
 }
-// ?QUESTION 63.Using the above countries array, find the country containing the biggest number of characters. Ethiopia
+// ?QUESTION 24.Using the above countries array, find the country containing the biggest number of characters. Ethiopia
+const countryWithMostCharacters = countries2.reduce((longest, current) => {
+  return current.length > longest.length ? current : longest;
+}, "");
+console.log(countryWithMostCharacters);
 
-// ?QUESTION 64.Using the above countries array, find the country containing only 5 characters. ['Japan', 'Kenya']
+// ?QUESTION 25.Using the above countries array, find the country containing only 5 characters. ['Japan', 'Kenya']
+const countryWithOnlyFiveCharacters = countries2.filter(
+  (country) => country.length === 5
+);
+console.log(countryWithOnlyFiveCharacters);
+// ?QUESTION 26.Find the longest word in the webTechs2 array
+let longestWord = webTechs2[0];
+console.log(longestWord);
+for (i = 1; i < webTechs2.length; i++) {
+  if (webTechs2[i].length > longestWord.length) {
+    {
+      longestWord = webTechs2[i];
+    }
+  }
+}
+console.log(longestWord);
 
-// ?QUESTION 65.Find the longest word in the webTechs2 array
+// ?QUESTION 27.Use the webTechs array to create the following array of arrays: [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+const arrayOfArrays = [];
+for (web of webTechs2) {
+  const individualArray = [web, web.length];
+  arrayOfArrays.push(individualArray);
+}
+console.log(arrayOfArrays);
+// ?QUESTION 28.An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+let acronym = "";
+for (i = 0; i < mernStack2.length; i++) {
+  acronym = acronym + mernStack2[i][0];
+}
+console.log(acronym);
+// ?QUESTION 29.Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+const technologies = [
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "Redux",
+  "Node",
+  "Express",
+  "MongoDB",
+];
+for (let i = 0; i < technologies.length; i++) {
+  console.log(technologies[i]);
+}
+for (const tech of technologies) {
+  console.log(tech);
+}
+// ?QUESTION 30.This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
 
-// ?QUESTION 66.Use the webTechs array to create the following array of arrays: [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
-
-// ?QUESTION 67.An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
-
-// ?QUESTION 68.Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
-
-// ?QUESTION 69.This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
-
-// ?QUESTION 70.Print all the elements of array as shown below.
+for (i = fruits.length - 1; i >= 0; i--) {
+  console.log(fruits[i]);
+  reversedFruit.push(fruits[i]);
+}
+console.log(reversedFruit);
+// ?QUESTION 31.Print all the elements of array as shown below.
 
 /* const fullStack = [
       ['HTML', 'CSS', 'JS', 'React'],
@@ -322,14 +368,64 @@ if (countriesEndWithIa.length > 0) {
     EXPRESS
     MONGODB */
 
+for (let i = 0; fullStack.length; i++) {
+  for (let y = 0; y < fullStack[i].length; y++) {
+    console.log(fullStack[i][y].toUpperCase());
+  }
+}
+
 // !Exercises: Level 3
 
-// ?QUESTION 71.Copy countries array(Avoid mutation)
-// ?QUESTION 72.Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
-// ?QUESTION 73.Sort the webTechs array and mernStack array
-// ?QUESTION 74.Extract all the countries contain the word 'land' from the countries array and print it as array
-// ?QUESTION 75.Find the country containing the hightest number of characters in the countries array
-// ?QUESTION 76.Extract all the countries contain the word 'land' from the countries array and print it as array
-// ?QUESTION 77.Extract all the countries containing only four characters from the countries array and print it as array
-// ?QUESTION 78.Extract all the countries containing two or more words from the countries array and print it as array
-// ?QUESTION 79.Reverse the countries array and capitalize each country and stored it as an array
+// ?QUESTION 32.Copy countries array(Avoid mutation)
+const copyCountries = [...countries2];
+console.log(countries2);
+// ?QUESTION 33.Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+const countriesCopy = [...countries2];
+const sortedCountries = countriesCopy.sort();
+console.log("Sorted array:", sortedCountries);
+// ?QUESTION 34.Sort the webTechs array and mernStack array
+const webTechsCopy = [...webTechs2];
+const sortedWebTechs = webTechsCopy.sort();
+console.log(sortedWebTechs);
+
+const mernStackCopy = [...mernStack2];
+const sortedMernStack = mernStackCopy.sort();
+console.log(sortedMernStack);
+// ?QUESTION 35.Extract all the countries contain the word 'land' from the countries array and print it as array
+const countriesWithLand = [];
+for (const country of countries2) {
+  if (country.includes("land")) {
+    countriesWithLand.push(country);
+  }
+}
+console.log(countriesWithLand);
+// ?QUESTION 36.Find the country containing the hightest number of characters in the countries array
+
+let longestCharacterCountry = countries2[0];
+for (let i = 1; i < countries2.length; i++) {
+  if (countries2[i].length > longestCharacterCountry.length) {
+    longestCharacterCountry = countries2[i];
+  }
+}
+console.log(longestCharacterCountry);
+// ?QUESTION 37.Extract all the countries containing only four characters from the countries array and print it as array
+const countriesWithOnlyFourCharacters = [];
+for (country of countries2) {
+  if (country.length === 4) {
+    countriesWithOnlyFourCharacters.push(country);
+  }
+}
+console.log(countriesWithOnlyFourCharacters);
+// ?QUESTION 38.Extract all the countries containing two or more words from the countries array and print it as array
+const countriesWithTwoOrMoreWords = [];
+for (country of countries2) {
+  if (country.split(" ").length > 1) {
+    countriesWithTwoOrMoreWords.push(country);
+  }
+}
+console.log(countriesWithTwoOrMoreWords);
+
+// ?QUESTION 39.Reverse the countries array and capitalize each country and stored it as an array
+const copyOfCountries = [...countries2];
+const reversedCountries = copyOfCountries.reverse();
+console.log(reversedCountries);
